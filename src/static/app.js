@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // DOM elements
   const activitiesList = document.getElementById("activities-list");
   const messageDiv = document.getElementById("message");
+  const announcementBanner = document.getElementById("announcement-banner");
+  const dismissAnnouncementButton = document.getElementById("dismiss-announcement");
   const registrationModal = document.getElementById("registration-modal");
   const modalActivityName = document.getElementById("modal-activity-name");
   const signupForm = document.getElementById("signup-form");
@@ -43,6 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Authentication state
   let currentUser = null;
+
+  if (sessionStorage.getItem("announcement-dismissed") === "true") {
+    announcementBanner.classList.add("hidden");
+  }
+
+  dismissAnnouncementButton.addEventListener("click", () => {
+    announcementBanner.classList.add("hidden");
+    sessionStorage.setItem("announcement-dismissed", "true");
+  });
 
   // Time range mappings for the dropdown
   const timeRanges = {
