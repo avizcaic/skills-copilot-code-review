@@ -73,6 +73,37 @@ header h2 {
   font-size: 1.2rem;
 }
 
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-left: 4px solid var(--secondary);
+  border-radius: 4px;
+  background-color: var(--warning-light);
+  color: var(--text-primary);
+}
+
+.announcement-banner p {
+  line-height: 1.5;
+}
+
+.dismiss-announcement {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}
+
+.dismiss-announcement:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -663,4 +694,12 @@ footer {
 
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.announcement-banner {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
 }
